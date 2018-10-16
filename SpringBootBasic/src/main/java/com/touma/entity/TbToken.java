@@ -3,7 +3,7 @@ package com.touma.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class TbToken implements Serializable {
+public class TbToken extends EntityBase {
   private static final long serialVersionUID = 6448483160916127686L;
 
   private String token;
@@ -43,11 +43,6 @@ public class TbToken implements Serializable {
 
   public void setLastupdate(Date lastupdate) {
     this.lastupdate = lastupdate;
-  }
-
-  @Override
-  public String toString() {
-    return "TbToken [token=" + token + ", uid=" + uid + ", lastupdate=" + lastupdate + "]";
   }
 
 }

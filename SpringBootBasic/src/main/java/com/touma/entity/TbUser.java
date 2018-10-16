@@ -5,15 +5,13 @@ import java.util.Date;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
-
-
 /**
  * TbUser表
  * 
  * @author 1329321290
  *
  */
-public class TbUser implements Serializable {
+public class TbUser extends EntityBase {
   private static final long serialVersionUID = 8884493054920090452L;
 
   private Integer uid;
@@ -83,12 +81,6 @@ public class TbUser implements Serializable {
 
   public void setReDate(Date reDate) {
     this.reDate = reDate;
-  }
-
-  @Override
-  public String toString() {
-    return "TbUser [uid=" + uid + ", username=" + username + ", password=" + password + ", nickname=" + nickname
-        + ", isEnable=" + isEnable + ", reDate=" + reDate + "]";
   }
 
 }

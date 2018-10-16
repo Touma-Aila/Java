@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.touma.config.MyConfig;
 import com.touma.entity.Greeting;
+import com.touma.entity.JsonMessage;
 
 /**
  * greeting控制器
@@ -15,20 +16,24 @@ import com.touma.entity.Greeting;
  *
  */
 @RestController
+@ResponseBody
 public class GreetingController {
   @Autowired
   private MyConfig myConfig;
 
   @RequestMapping(name = "")
-  public String index() {
+  public JsonMessage index() {
     // 127.0.0.1:20000
-    return String.format("欢迎使用springboot服务,%s,%s", myConfig.appName, myConfig.reload);
+    String m = String.format("欢迎使用springboot服务,%s,%s", myConfig.appName, myConfig.reload);
+    JsonMessage message = JsonMessage.getSuccess(m);
+    return message;
   }
 
   @RequestMapping("/greeting")
-  @ResponseBody
   // Http://127.0.0.1/greeting?id=xxx&content=xxxx
-  public Greeting greeting(Greeting greeting) {
-    return greeting;
+  public JsonMessage greeting(Greeting greeting) {
+    JsonMessage message = JsonMessage.getSuccess("");
+    message.getDatas().put("greeting", greeting);
+    return message;
   }
 }

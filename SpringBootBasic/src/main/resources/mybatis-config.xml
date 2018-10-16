@@ -3,10 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-  <typeAliases>
-    <package name="com.touma.entity" />
-  </typeAliases>
-  <mappers>
-  	<mapper resource="com/touma/mapper/TbUser.xml"/>
-  </mappers>
+	<typeAliases>
+		<package name="com.touma.entity" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="com/touma/mapper/TbUser.xml" />
+		<mapper resource="com/touma/mapper/Utils.xml" />
+		<mapper resource="com/touma/mapper/TbToken.xml" />
+	</mappers>
 </configuration>
