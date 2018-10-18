@@ -1,8 +1,13 @@
 package com.touma.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * entitybase-实体层标准
+ * 
+ * @author 1329321290
+ *
+ */
 public class TbToken extends EntityBase {
   private static final long serialVersionUID = 6448483160916127686L;
 

@@ -17,26 +17,35 @@ import com.touma.entity.TbToken;
 @Mapper
 public interface TbTokenDAO {
   /**
-   * 添加Token
+   * addToken-添加Token
    * 
    * @param touken
    * @return
    */
-  int addToken(TbToken touken) throws Exception;
+  int addToken(TbToken token) throws Exception;
 
   /**
-   * 更新Token时间
+   * updateToken-更新Token时间
    * 
    * @param touken
    * @return
    */
-  int updateToken(TbToken touken) throws Exception;
+  int updateToken(TbToken token) throws Exception;
 
   /**
-   * 查询Token是否存在
+   * queryToken-查询Token是否存在
    * 
    * @param touken
    * @return
    */
-  TbToken queryToken(TbToken touken) throws Exception;
+  TbToken queryToken(TbToken token) throws Exception;
+
+  /**
+   * deleteTokens-删除Token任务
+   * 
+   * @param token
+   * @return
+   * @throws Exception
+   */
+  int deleteTokens() throws Exception;
 }

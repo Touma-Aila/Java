@@ -16,4 +16,10 @@ public interface TaskService {
    * 固定时间点执行
    */
   void showTimeOnce();
+
+  /**
+   * 删除Token任务
+   */
+  void deleteTokens();
+
 }
